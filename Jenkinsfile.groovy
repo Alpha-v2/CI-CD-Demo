@@ -1,4 +1,4 @@
-def s3_source = "/home/ubuntu/FirstProject/target/FirstProject.war"
+def s3_source = "/home/ubuntu/FirstProject/workspace/First_Pipeline@2/target/FirstProject.war"
 
 pipeline {
       agent {label "build_server"}
