@@ -4,14 +4,14 @@ Pipeline{
       agent{label "build_server"}
       Stages{
       // Creating build job
-        Stage(Building Maven War){
+        Stage("Building Maven War"){
           Steps{
              sh "mvn clean install"
 
           }
 
         }
-        Stage(Copy War to s3 bucket){
+        Stage("Copy War to s3 bucket"){
 
         Steps{
 
