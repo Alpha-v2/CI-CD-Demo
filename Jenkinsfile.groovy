@@ -1,19 +1,19 @@
 def s3_source = "/home/ubuntu/FirstProject/target/FirstProject.war"
 
-Pipeline {
+pipeline {
       agent {label "build_server"}
-      Stages {
+      stages {
       // Creating build job
-        Stage ("Building Maven War") {
-          Steps {
+        stage ("Building Maven War") {
+          steps {
              sh "mvn clean install"
 
           }
 
         }
-        Stage ("Copy War to s3 bucket") {
+        stage ("Copy War to s3 bucket") {
 
-        Steps {
+        steps {
 
         sh "s3 cp ${s3_source} s3://cicd.demo"
         }
