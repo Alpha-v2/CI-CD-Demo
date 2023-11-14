@@ -15,7 +15,7 @@ pipeline {
 
         steps {
 
-        sh "s3 cp ${s3_source} s3://cicd.demo"
+        sh "aws s3 cp ${s3_source} s3://cicd.demo"
         }
         }
       }
