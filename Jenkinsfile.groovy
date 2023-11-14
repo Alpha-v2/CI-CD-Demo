@@ -1,4 +1,4 @@
-def s3 source = "/home/ubuntu/FirstProject/target/FirstProject.war"
+def s3_source = "/home/ubuntu/FirstProject/target/FirstProject.war"
 
 Pipeline{
       agent{label "build_server"}
@@ -15,7 +15,7 @@ Pipeline{
 
         Steps{
 
-        sh "s3 cp ${s3 source} s3://cicd.demo"
+        sh "s3 cp ${s3_source} s3://cicd.demo"
         }
         }
       }
