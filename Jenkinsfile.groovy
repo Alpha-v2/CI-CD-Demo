@@ -3,7 +3,7 @@ def s3_source = "/home/ubuntu/FirstProject/workspace/First_Pipeline@2/target/Fir
 pipeline {
       agent {label "build_server"}
       stages {
-      // Creating build job
+      // Creating build job from maven
         stage ("Building Maven War") {
           steps {
              sh "mvn clean install"
