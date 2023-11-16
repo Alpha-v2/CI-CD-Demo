@@ -19,4 +19,7 @@ pipeline {
         }
         }
       }
+
+      build 'Test'
+            
       }
