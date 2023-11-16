@@ -18,8 +18,6 @@ pipeline {
         sh "aws s3 cp ${s3_source} s3://cicd.demo"
         }
         }
+      }      
       }
-
       build 'Test'
-            
-      }
